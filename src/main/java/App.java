@@ -33,12 +33,6 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
 
-
-//        get("/Hero", (request, response) -> {
-//            Map<String, Object> model = new HashMap<>();
-//            return new ModelAndView(model, "Hero.hbs");
-//        }, new HandlebarsTemplateEngine());
-
         get("/Hero", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             ArrayList<Hero> hero = Hero.getAllInstances();
@@ -65,15 +59,16 @@ public class App {
             return new ModelAndView(model, "Squad.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/squad/new",(request, response) -> {
+        post("/new/squad",(request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            String squadTag = request.queryParams("tag");
-            Integer Total = Integer.parseInt(request.queryParams("total"));
-            String Motive = request.queryParams("motive");
-            Squad newSquad = new Squad(squadTag, Total, Motive);
+            String squadTag = request.queryParams("squadTag");
+            Integer squadTotal = Integer.parseInt(request.queryParams("squadTotal"));
+            String motive = request.queryParams("motive");
+            Squad newSquad = new Squad(squadTag, squadTotal, motive);
             request.session().attribute("item", squadTag);
             model.put("item", request.session().attribute("item"));
-            return new ModelAndView(model, "submit.hbs");
+            model.put("newSquad", newSquad);
+            return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
 
         post("/new/hero", (request, response) -> {
