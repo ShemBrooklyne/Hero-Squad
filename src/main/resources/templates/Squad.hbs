@@ -1,58 +1,42 @@
 {{#partial "content"}}
-    <section class="landing-pg">
-        <div class="land-left">
-        </div>
-        <div class="land-right">
-        </div>
 
-        <div class="squad">
-            <div id="newMember">
-                <p class="close">&cross;</p>
-                <h2>Choose Squad Members</h2>
+
+
+<div class="container-fluid harlem"> <br> <hr>
+    <div class="container gotham">
+         <h2 class="text-danger">Choose Squad Members</h2>
             {{#each hero}}
-                 <div class="hero-item">
-                  <div class="hero-detail">
                     <p>Name: {{name}}</p>
                     <p>Super power: {{ power }}</p>
                     <a>Add To Squad</a>
-                  </div>
-                </div>
             {{/each}}
-            </div>
-            <h2>
                 <a class="btn btn-warning" href="/Squad-form">Create Your Squad</a>
                 <br><br>
-        {{#if squads}}
-                AVAILABLE SQUADS
-            </h2>
-        {{#each squads}}
-            <div class="squad-cont">
-                <img src="" alt="">
-                <div>
-                  <h1>{{ tag }} </h1>
-                    <p>Objectives: {{motive}}</p>
-                    <p>Squad Size: {{ total }}</p>
-                    <br><br>
-                  <h3>MEMBERS</h3>
-                    <button class="addMember add-btn" >Add New Member</button>
+                {{#if squads}}
+                <h2 class="text-danger">AVAILABLE SQUADS</h2>
+            {{#each squads}}
+                <div class="mySquad">
+                  <h3 class="text-warning text-uppercase">{{ squadTag }} </h3>
+                    <p class="text-white">Objectives: {{motive}}</p>
+                    <p class="text-white">Squad Size: {{ squadTotal }}</p>
+                    <br> 
+                  <h3 class="text-danger">Justice League</h3>
+                    <button class="btn btn-primary" >Recruit Noobies</button>
                     {{#each squadMembers}}
-                        <div class="member-cont">
+                        <div class="members">
                             <h5>Name: {{this.name}}</h5>
                             <h5>Power: {{power}}</h5>
-                            <Button class="btns">Remove</Button>
+                            <Button class="btn btn-danger">Remove</Button>
                         </div>
                     {{/each}}
-
-
                 </div>
-            </div>
         {{/each}}
         {{else}}
-            <h2>Please create a squad to continue</h2>
+            <h2 class="text-warning">Please create a squad to continue</h2>
         {{/if}}
-        </div>
+    </div>
+</div>
 
-    </section>
 {{/partial}}
 {{#partial "footer"}}
 

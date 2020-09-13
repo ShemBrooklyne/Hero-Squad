@@ -13,19 +13,18 @@ body {
 .page {
   height: 560px;
   background-color: rgba(0, 0, 0, 0.658);
-  background-image: url('/images/superman.png');
+  background-image: url("/images/superman.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-
 .btns {
   margin-top: 12%;
 }
 
-
-img, .btn9 {
+img,
+.btn9 {
   animation: shake 1s;
   animation-iteration-count: infinite;
 }
@@ -74,7 +73,7 @@ img, .btn9 {
 .hero {
   height: 420px;
   background-color: rgba(0, 0, 0, 0.658);
-  background-image: url('/images/hero.png');
+  background-image: url("/images/hero.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -96,7 +95,7 @@ img, .btn9 {
 .squad {
   height: 420px;
   background-color: rgba(0, 0, 0, 0.658);
-  background-image: url('/images/Squad.png');
+  background-image: url("/images/Squad.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -114,7 +113,7 @@ img, .btn9 {
 .success {
   height: 560px;
   background-color: rgba(0, 0, 0, 0.658);
-  background-image: url('/images/heroview.png');
+  background-image: url("/images/heroview.png");
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;
@@ -126,16 +125,71 @@ img, .btn9 {
 }
 
 .display {
-  height: 560px;
+  height: 760px;
   background-color: rgba(0, 0, 0, 0.658);
-  background-image: url('/images/heroview.png');
+  background-image: url("/images/heroview.png");
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;
 }
 
 .hero-item {
-  height: 420px;
+  height: 560px;
+  background-color: rgba(0, 0, 0, 0.664);
+  background-image: url("/images/Batman.png");
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* .dist {
+  vertical-align: middle;
+} */
+
+.dist {
+  width: 500px;
+  max-width: 90%;
+  margin: 2% 3%;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  padding: 10px;
+  padding: 10px;
+  padding-left: 60px;
+  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.068);
+  background: rgba(9, 22, 9, 0.5);
+  border-radius: 5px;
+}
+
+.kal {
   background-color: rgba(0, 0, 0, 0.664);
 }
 
+.harlem {
+    height: 780px;
+    background-color: rgba(0, 0, 0, 0.658);
+    background-image: url("/images/Squad.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.gotham {
+  background-color: rgba(0, 0, 0, 0.664);
+  height: 680px;
+}
+
+.mySquad {
+  width: 500px;
+  max-width: 90%;
+  margin: 2% 3%;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  padding: 10px;
+  padding: 10px;
+  padding-left: 60px;
+  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.068);
+  background: rgba(9, 22, 9, 0.5);
+  border-radius: 5px;
+}
