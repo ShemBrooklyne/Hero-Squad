@@ -4,14 +4,21 @@
     <h2 class="text-danger text-center">CURRENT HEROES</h2>
     <div class="container hero-item">
         {{#each Hero}}
-        <div class="text-center">
+        <div class="text-white">
             <p>Name: {{ name }} </p>
             <p>Age: {{ age }}</p>
             <p>Special power: {{ power }}</p>
             <p>Weakness: {{ weakness }}</p>
-            <a href="/Squad">Add {{ name }} To Squad</a>
-            {{/each}}
+            <p>Id: {{ id }}</p>
+            <button class="btn btn-danger" type="submit">
+                <a href="new/{{id}}" class="btns">Learn More</a>
+            </button>
+            <button class="btn btn-warning" type="submit">
+                <a href="/Squad">Add {{ name }} To Squad</a>
+            </button>
         </div>
+        {{/each}}
+
     </div>
 </div>
 {{/partial}}

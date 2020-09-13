@@ -8,6 +8,7 @@ public class Hero {
     private int age;
     private String power;
     private String weakness;
+    private int id;
     private static ArrayList<Hero> instances = new ArrayList<>();
 
     public Hero (String name, Integer age, String power, String weakness) {
@@ -16,7 +17,9 @@ public class Hero {
         this.power = power;
         this.weakness = weakness;
         instances.add(this);
+        this.id = instances.size();
     }
+
 
 
 
@@ -40,8 +43,21 @@ public class Hero {
         return instances;
     }
 
+    public static ArrayList<Hero> getAllInstances() {
+
+        return instances;
+    }
+
     public static void clearHeroes() {
         instances.clear();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public static Hero findById(int id) {
+        return instances.get(id-1);
     }
 
     public static Hero buildNewHero() {

@@ -16,6 +16,10 @@ public class App {
     public static void main(String[] args) {
 
         staticFileLocation("/public");
+        Hero.buildNewHero();
+        Hero.buildNewHero1();
+        Squad.buildNewSquad();
+        Squad.buildNewSquad1();
 
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
@@ -28,15 +32,17 @@ public class App {
             return new ModelAndView(model, "Hero-form.hbs");
         }, new HandlebarsTemplateEngine());
 
-//        get("/Hero",(req, res) ->{
+
+
+//        get("/Hero", (request, response) -> {
 //            Map<String, Object> model = new HashMap<>();
-//            ArrayList<Hero> Hero = Hero.getAllInstances();
-//            model.put("Hero",Hero);
 //            return new ModelAndView(model, "Hero.hbs");
 //        }, new HandlebarsTemplateEngine());
 
         get("/Hero", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
+            ArrayList<Hero> hero = Hero.getAllInstances();
+            model.put("Hero", hero);
             return new ModelAndView(model, "Hero.hbs");
         }, new HandlebarsTemplateEngine());
 

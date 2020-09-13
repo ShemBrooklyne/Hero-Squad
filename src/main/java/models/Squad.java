@@ -4,6 +4,7 @@ package models;
 
 public class Squad {
 
+    private int squadId;
     private String squadTag;
     private int squadTotal;
     private String Motive;
@@ -17,6 +18,14 @@ public class Squad {
         this.Motive = motive;
         this.squadMembers = new ArrayList<>();
         instances.add(this);
+        this.squadId = instances.size();
+    }
+
+    public int getSquadId() {
+        return squadId;
+    }
+    public static Squad findBySquadId(int id) {
+        return instances.get(id-1);
     }
 
     public String getSquadTag() {
