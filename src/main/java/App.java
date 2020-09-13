@@ -1,6 +1,6 @@
-import static spark.Spark.get;
-import static spark.Spark.staticFileLocation;
+import static spark.Spark.*;
 import static spark.route.HttpMethod.post;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,28 +47,43 @@ public class App {
             return new ModelAndView(model, "Squad-form.hbs");
         }, new HandlebarsTemplateEngine());
 
-//        get("/Squad",(req, res) ->{
-//            Map<String, Object> model = new HashMap<>();
-//            ArrayList<Squad> squad = Squad.getInstances();
-//            model.put("squad",Squad);
-//            ArrayList<Hero> members = Hero.getAllInstances();
-//            model.put("hero",members);
-//            model.put("allSquadMembers", newSquad.getSquadMembers());
-//            return new ModelAndView(model, "Squad.hbs");
-//        }, new HandlebarsTemplateEngine());
+//
+        get("/Squad", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            ArrayList<Squad> squads = Squad.getInstances();
+            model.put("squads", squads);
+            ArrayList<Hero> members = Hero.getInstances();
+            Squad newSquad = squads.get(1);
+            model.put("Heroes", members);
+            model.put("squadMembers", newSquad.getSquadMembers());
+            return new ModelAndView(model, "Squad.hbs");
+        }, new HandlebarsTemplateEngine());
 
-//        post("/new/hero",(req, res) ->{
-//            Map<String, Object> model = new HashMap<>();
-//            String name = req.queryParams("name");
-//            Integer age = Integer.parseInt(req.queryParams("age"));
-//            String power = req.queryParams("power");
-//            String weakness = req.queryParams("weakness");
-//            Hero newHero = new Hero(name,age,power,weakness);
-//            req.session().attribute("item",name);
-//            model.put("item",req.session().attribute("item"));
-//            model.put("newHero",newHero);
-//            return new ModelAndView(model, "submit.hbs");
-//        }, new HandlebarsTemplateEngine());
+        post("/squad/new",(request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String squadTag = request.queryParams("tag");
+            Integer Total = Integer.parseInt(request.queryParams("total"));
+            String Motive = request.queryParams("motive");
+            Squad newSquad = new Squad(squadTag, Total, Motive);
+            request.session().attribute("item", squadTag);
+            model.put("item", request.session().attribute("item"));
+            return new ModelAndView(model, "submit.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        post("/new/hero", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String name = request.queryParams("name");
+            Integer age = Integer.parseInt(request.queryParams("age"));
+            String power = request.queryParams("power");
+            String weakness = request.queryParams("weakness");
+            Hero buildHero = new Hero(name, age, power, weakness);
+            request.session().attribute("item", name);
+            model.put("item", request.session().attribute("item"));
+            model.put("newHero", buildHero);
+            return new ModelAndView(model, "submit.hbs");
+        }, new HandlebarsTemplateEngine());
+
+
 
 
 

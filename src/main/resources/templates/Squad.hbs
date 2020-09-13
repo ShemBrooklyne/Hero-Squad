@@ -11,7 +11,6 @@
                 <h2>Choose Squad Members</h2>
             {{#each heroes}}
                  <div class="hero-item">
-                  <img src="/img/DIAMONDHEAD06_4C.png" alt="">
                   <div class="hero-detail">
                     <p>Name: {{name}}</p>
                     <p>Super power: {{ power }}</p>
@@ -21,7 +20,7 @@
             {{/each}}
             </div>
             <h2>
-                <a class="btns" href="/squad-form">Create Your Squad</a>
+                <a class="btns" href="/Squad-form">Create Your Squad</a>
                 <br><br>
         {{#if squads}}
                 AVAILABLE SQUADS
@@ -56,7 +55,6 @@
     </section>
 {{/partial}}
 {{#partial "footer"}}
-    <script type="text/javascript" src="/js/jquery-3.4.0.min.js"></script>
-    <script type="text/javascript" src="/js/script.js"></script>
+
 {{/partial}}
 {{> layout.hbs}}

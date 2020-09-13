@@ -89,6 +89,10 @@ img, .btn9 {
   margin-left: 25%;
 }
 
+.sqform {
+  width: 56px;
+}
+
 .squad {
   height: 420px;
   background-color: rgba(0, 0, 0, 0.658);
