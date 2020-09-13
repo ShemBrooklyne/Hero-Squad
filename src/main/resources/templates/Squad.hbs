@@ -9,7 +9,7 @@
             <div id="newMember">
                 <p class="close">&cross;</p>
                 <h2>Choose Squad Members</h2>
-            {{#each heroes}}
+            {{#each hero}}
                  <div class="hero-item">
                   <div class="hero-detail">
                     <p>Name: {{name}}</p>
@@ -20,7 +20,7 @@
             {{/each}}
             </div>
             <h2>
-                <a class="btns" href="/Squad-form">Create Your Squad</a>
+                <a class="btn btn-warning" href="/Squad-form">Create Your Squad</a>
                 <br><br>
         {{#if squads}}
                 AVAILABLE SQUADS
@@ -29,9 +29,9 @@
             <div class="squad-cont">
                 <img src="" alt="">
                 <div>
-                  <h1>{{ squadTag }} </h1>
-                    <p>Objectives: {{Motive}}</p>
-                    <p>Squad Size: {{ Total }}</p>
+                  <h1>{{ tag }} </h1>
+                    <p>Objectives: {{motive}}</p>
+                    <p>Squad Size: {{ total }}</p>
                     <br><br>
                   <h3>MEMBERS</h3>
                     <button class="addMember add-btn" >Add New Member</button>

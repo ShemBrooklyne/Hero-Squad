@@ -102,8 +102,17 @@ img, .btn9 {
   background-size: contain;
 }
 
-.display {
+/* .display {
   height: 420px;
+  background-color: rgba(0, 0, 0, 0.658);
+  background-image: url('/images/heroview.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+} */
+
+.success {
+  height: 560px;
   background-color: rgba(0, 0, 0, 0.658);
   background-image: url('/images/heroview.png');
   background-repeat: no-repeat;
@@ -113,22 +122,20 @@ img, .btn9 {
 
 .sub {
   height: 420px;
+  background-color: rgba(0, 0, 0, 0.664);
+}
+
+.display {
+  height: 560px;
+  background-color: rgba(0, 0, 0, 0.658);
   background-image: url('/images/heroview.png');
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;
 }
- 
-/* .sub {
-  background-image: url('/images/Batman.png');
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: contain;
-} */
 
-.success {
-  margin-left: 50%;
-  background-color: rgba(0, 0, 0, 0.658);
+.hero-item {
   height: 420px;
+  background-color: rgba(0, 0, 0, 0.664);
 }
 

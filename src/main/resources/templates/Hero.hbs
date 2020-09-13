@@ -1,21 +1,18 @@
 {{#partial "content"}}
-
 <div class="container-fluid display">
-        <h2> <a class="btns" href="/Hero-form">Create Your Hero</a> <br><br> CURRENT HEROES</h2>
-    <div class="heroes">
-        {{#each hero}}
-        <div class="container">
-            <div class="hero-item">
-                <p>Name: {{ name }} </p>
-                <p>Age: {{ age }}</p>
-                <p>Special power: {{ power }}</p>
-                <p>Weakness: {{ weakness }}</p>
-                <a href="/Squad">Add {{ name }} To Squad</a>
-            </div>
+    <h2> <a class="text-warning text-center" href="/Hero-form">Create Your Hero</a> <br><br> </h2>
+    <h2 class="text-danger text-center">CURRENT HEROES</h2>
+    <div class="container hero-item">
+        {{#each Hero}}
+        <div class="text-center">
+            <p>Name: {{ name }} </p>
+            <p>Age: {{ age }}</p>
+            <p>Special power: {{ power }}</p>
+            <p>Weakness: {{ weakness }}</p>
+            <a href="/Squad">Add {{ name }} To Squad</a>
+            {{/each}}
         </div>
-
-        {{/each}}
-
+    </div>
 </div>
 {{/partial}}
 {{> layout.hbs}}
