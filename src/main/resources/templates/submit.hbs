@@ -1,19 +1,13 @@
 {{#partial "content"}}
-    <section class="landing-pg">
-        <div class="land-left">
-        </div>
-        <div class="land-right">
-        </div>
 
-        <div class="success">
+<div class="container-fluid sub">
+        <div class="container success">
+        <h3 class="text-danger">Hero Creation was a Success <br> Hero <span>{{ item }} </span> Has been created. <br></h3>
 
-            <h3>Success <br>  <span>{{ item }} </span> <br> Has been created <br>{{sqId}}</h3>
+        <a class="btn btn-primary" href="/Hero">View Heroes</a>
+        <a class="btn btn-primary" href="/Squad">View Squads</a>
+    </div>
+</div>
 
-            <a class="btn btn-primary" href="/Hero">View Heroes</a>
-            <a class="btn btn-primary" href="/Squad">View Squads</a>
-
-
-        </div>
-    </section>
 {{/partial}}
 {{> layout.hbs}}

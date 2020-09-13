@@ -1,23 +1,21 @@
-
 {{#partial "content"}}
-    <section class="landing-pg">
-        <div class="land-left">
-        </div>
-        <div class="land-right">
-        </div>
-        <h2> <a class="btns" href="/Hero-form" >Create Your Hero</a> <br><br> CURRENT HEROES</h2>
-        <div class="heroes">
-            {{#each hero}}
-                <div class="hero-item">
-                    <p>Name: {{ name }} </p>
-                    <p>Age: {{ age }}</p>
-                    <p>Special power: {{ power }}</p>
-                    <p>Weakness: {{ weakness }}</p>
-                    <a href="/Squad" class="btns">Add {{ name }} To Squad</a>
-                </div>
 
-            {{/each}}
+<div class="container-fluid display">
+        <h2> <a class="btns" href="/Hero-form">Create Your Hero</a> <br><br> CURRENT HEROES</h2>
+    <div class="heroes">
+        {{#each hero}}
+        <div class="container">
+            <div class="hero-item">
+                <p>Name: {{ name }} </p>
+                <p>Age: {{ age }}</p>
+                <p>Special power: {{ power }}</p>
+                <p>Weakness: {{ weakness }}</p>
+                <a href="/Squad">Add {{ name }} To Squad</a>
+            </div>
         </div>
-    </section>
+
+        {{/each}}
+
+</div>
 {{/partial}}
 {{> layout.hbs}}

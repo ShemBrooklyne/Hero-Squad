@@ -101,5 +101,34 @@ img, .btn9 {
   background-position: center;
   background-size: contain;
 }
+
+.display {
+  height: 420px;
+  background-color: rgba(0, 0, 0, 0.658);
+  background-image: url('/images/heroview.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+.sub {
+  height: 420px;
+  background-image: url('/images/heroview.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
  
+/* .sub {
+  background-image: url('/images/Batman.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+} */
+
+.success {
+  margin-left: 50%;
+  background-color: rgba(0, 0, 0, 0.658);
+  height: 420px;
+}
 
