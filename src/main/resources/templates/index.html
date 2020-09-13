@@ -1,4 +1,3 @@
-{{#block "header"}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/src/main/resources/public/css/styles.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet" />
 </head>
@@ -24,9 +23,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active text-white" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-link text-white" href="/Hero">Hero</a>
-                    <a class="nav-link text-white" href="/Squad">Squad</a>
-                    <a class="nav-link text-white" href="/Hero-form" tabindex="-1">Create Hero</a>
+                    <a class="nav-link text-white" href="#">Hero</a>
+                    <a class="nav-link text-white" href="#">Squad</a>
+                    <a class="nav-link text-white" href="#" tabindex="-1">Create Hero</a>
                 </div>
             </div>
         </nav>
@@ -43,35 +42,20 @@
                         <div class="row">
                             
                             <div class="col-md-8">
-                                <img src="/images/Batman&Robbin.png" alt="" width="350" height="400" />
+                                <img src="/src/main/resources/public/images/Batman&Robbin.png" alt="" width="350" height="400" />
                             </div>
 
                             <div class="col-md-4 btns">
-                                <a href="/Hero-form">
-                                <button class="btn btn-warning">Create Hero</button>
-                                </a> <br />
+                                <button class="btn btn-warning">Create Hero</button> <br />
                                 <br/>
-                                <a href="/Squad-form">
-                                <button class="btn btn-warning">Create a Squad</button>
-                                </a> <br />
+                                <button class="btn btn-warning">Create a Squad</button> <br />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-               
-        {{/block}}
-
-        {{#block "content"}}
-
-        {{/block}}
-
-        {{#block "footer"}}
     </div>
-
-
 </body>
 
 </html>
-{{/block}}
