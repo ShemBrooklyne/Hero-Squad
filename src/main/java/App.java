@@ -52,6 +52,20 @@ public class App {
             return new ModelAndView(model, "Hero.hbs");
         }, new HandlebarsTemplateEngine());
 
+        post("/new/hero", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String name = request.queryParams("name");
+            Integer age = Integer.parseInt(request.queryParams("age"));
+            String power = request.queryParams("power");
+            String weakness = request.queryParams("weakness");
+            Hero buildHero = new Hero(name, age, power, weakness);
+            request.session().attribute("item", name);
+            model.put("item", request.session().attribute("item"));
+            model.put("newHero", buildHero);
+            return new ModelAndView(model, "submit.hbs");
+        }, new HandlebarsTemplateEngine());
+
+
 
 //Form for registering a squad
         get("/Squad-form",(req, res) ->{
@@ -80,21 +94,9 @@ public class App {
             request.session().attribute("item", squadTag);
             model.put("item", request.session().attribute("item"));
             model.put("newSquad", newSquad);
-            return new ModelAndView(model, "squad.hbs");
-        }, new HandlebarsTemplateEngine());
-
-        post("/new/hero", (request, response) -> {
-            Map<String, Object> model = new HashMap<>();
-            String name = request.queryParams("name");
-            Integer age = Integer.parseInt(request.queryParams("age"));
-            String power = request.queryParams("power");
-            String weakness = request.queryParams("weakness");
-            Hero buildHero = new Hero(name, age, power, weakness);
-            request.session().attribute("item", name);
-            model.put("item", request.session().attribute("item"));
-            model.put("newHero", buildHero);
             return new ModelAndView(model, "submit.hbs");
         }, new HandlebarsTemplateEngine());
+
 
 
 

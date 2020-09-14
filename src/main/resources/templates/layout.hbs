@@ -8,6 +8,9 @@
     <title>Hero-Squad 2.0</title>
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet" />
 </head>
 
@@ -23,7 +26,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link active text-white" href="/">Home <span class="sr-only">(current)</span></a>
                     <a class="nav-link text-white" href="/Hero">Hero</a>
                     <a class="nav-link text-white" href="/Squad">Squad</a>
                     <a class="nav-link text-white" href="/Hero-form" tabindex="-1">Create Hero</a>
@@ -31,37 +34,11 @@
             </div>
         </nav>
 
-        <div class="main-pg">
-            <br />
-            <hr class="text-danger" />
-            <br />
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 page">
-                        <br />
-                        <h1 class="text-center text-danger">Create a Hero</h1>
-                        <div class="row">
-                            
-                            <div class="col-md-8">
-                                <img src="/images/Batman&Robbin.png" alt="" width="350" height="400" />
-                            </div>
-
-                            <div class="col-md-4 btns">
-                                <a href="/Hero-form">
-                                <button class="btn btn-warning">Create Hero</button>
-                                </a> <br />
-                                <br/>
-                                <a href="/Squad-form">
-                                <button class="btn btn-warning">Create a Squad</button>
-                                </a> <br />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-               
         {{/block}}
+
+
+
+
 
         {{#block "content"}}
 
