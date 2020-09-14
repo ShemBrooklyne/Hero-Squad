@@ -98,7 +98,7 @@
         <configuration>
           <jdkVersion>1.8</jdkVersion>
           <!-- Change this to YOUR application name! -->
-          <appName>Hero-Squad 2.0</appName>
+          <appName>shemssquad</appName>
           <processTypes>
             <web>java -jar target/my-app-1.0-jar-with-dependencies.jar</web>
           </processTypes>
