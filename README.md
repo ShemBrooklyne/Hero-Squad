@@ -17,7 +17,7 @@ Visit the link - https://github.com/ShemBrooklyne/Hero-Squad
 5. Then open the terminal and write `$ gradle run`.
 
 ## Link to live site
-- https://github.com/ShemBrooklyne/Hero-Squad
+- https://shemsheroes.herokuapp.com/
 
 ## LICENSE
 Copyright 2020 Shem Brooklyne Mwangi
