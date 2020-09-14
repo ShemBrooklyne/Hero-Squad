@@ -5,7 +5,7 @@
 ### Shem Brooklyne Mwangi    
 
 ## DESCRIPTION
-
+Hero-Squad app is an app that allows a user to create a new hero and also add the new character to a prefferable Hero-Squad.
 
 ## Project Setup Instructions
 Visit the link - https://github.com/ShemBrooklyne/Hero-Squad
