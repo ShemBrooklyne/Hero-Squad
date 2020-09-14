@@ -61,11 +61,11 @@ public class Squad {
     }
 
     public static Squad buildNewSquad() {
-        return new Squad("Infinite", 5, "Feminism");
+        return new Squad("Infinite", 3, "Feminism");
     }
 
     public static Squad buildNewSquad1() {
-        return new Squad("Karel", 5, "Protect Humans");
+        return new Squad("Karel", 4, "Protect Humans");
     }
 
     public static Squad buildNewSquad2() {
