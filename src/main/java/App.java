@@ -1,4 +1,5 @@
 import static spark.Spark.*;
+import static spark.debug.DebugScreen.enableDebugScreen;
 import static spark.route.HttpMethod.post;
 
 
@@ -14,6 +15,7 @@ import spark.template.handlebars.HandlebarsTemplateEngine;
 
 public class App {
 
+  
     static int getHerokuAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
         if (processBuilder.environment().get("PORT") != null) {
@@ -23,6 +25,9 @@ public class App {
     }
 
     public static void main(String[] args) {
+
+        enableDebugScreen();
+
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
         staticFileLocation("/public");
