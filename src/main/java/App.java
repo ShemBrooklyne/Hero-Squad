@@ -93,20 +93,13 @@ public class App {
             String squadTag = request.queryParams("squadTag");
             Integer squadTotal = Integer.parseInt(request.queryParams("squadTotal"));
             String motive = request.queryParams("motive");
-            Squad newSquad = new Squad(squadTag, squadTotal, motive);
+            Squad buildSquad = new Squad(squadTag, squadTotal, motive);
             request.session().attribute("item", squadTag);
             model.put("item", request.session().attribute("item"));
-            model.put("newSquad", newSquad);
+            model.put("newSquad", buildSquad);
             return new ModelAndView(model, "submit.hbs");
         }, new HandlebarsTemplateEngine());
 
-
-
-
-
-
-
-
-
+//
     }
 }
