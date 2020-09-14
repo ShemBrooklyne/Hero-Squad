@@ -13,26 +13,38 @@ import spark.template.handlebars.HandlebarsTemplateEngine;
 
 
 public class App {
-    public static void main(String[] args) {
 
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+    }
+
+    public static void main(String[] args) {
+        port(getHerokuAssignedPort());
+        staticFileLocation("/public");
         staticFileLocation("/public");
         Hero.buildNewHero();
         Hero.buildNewHero1();
         Squad.buildNewSquad();
         Squad.buildNewSquad1();
 
+//        main page
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(new HashMap(), "main.hbs");
         }, new HandlebarsTemplateEngine()
         );
 
+//        Hero form for filling
         get("/Hero-form",(req, res) ->{
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "Hero-form.hbs");
         }, new HandlebarsTemplateEngine());
 
-
+//The Heroes page, where all are displayed
         get("/Hero", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             ArrayList<Hero> hero = Hero.getAllInstances();
@@ -41,13 +53,13 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
 
-
+//Form for registering a squad
         get("/Squad-form",(req, res) ->{
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "Squad-form.hbs");
         }, new HandlebarsTemplateEngine());
 
-//
+//The Squads page, where all squads are displayed
         get("/Squad", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             ArrayList<Squad> squads = Squad.getInstances();
