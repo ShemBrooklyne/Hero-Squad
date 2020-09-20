@@ -1,195 +1,65 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.664);
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+    min-height: 100vh;
 }
 
 .main-pg {
-  height: 790px;
-  background-color: rgba(0, 0, 0, 0.664);
+    height: 801px;
+    background-image: url('/images/mainpg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.page {
-  height: 560px;
-  background-color: rgba(0, 0, 0, 0.658);
-  background-image: url("/images/superman.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.pg-1, .pg-2 {
+    height: 400px;
+    margin-top: 13%;
+}
+
+.pg-1 {
+    background-color: rgba(0, 0, 0, 0.644);
+}
+
+.pg-2, .chart {
+    background-color: rgba(240, 248, 255, 0.548);
 }
 
 .btns {
-  margin-top: 12%;
+    margin-top: 18%;
+    margin-left: 25%;
 }
 
-img,
-.btn9 {
-  animation: shake 1s;
-  animation-iteration-count: infinite;
+.forms-tr {
+    background-color: rgba(0, 0, 0, 0.644);
+    height: 620px;
+    margin-top: 10%;
 }
 
-.btn:hover {
-  animation: shake 1s;
-  animation-iteration-count: infinite;
+input {
+    width: 320px;
 }
 
-@keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
+.form {
+    /* border: solid black;
+    height: 350px;
+    width: fit-content; */
+    margin-top: 0%;
 }
 
-.hero {
-  height: 420px;
-  background-color: rgba(0, 0, 0, 0.658);
-  background-image: url("/images/hero.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+.form1 {
+    margin-left: 30%;
 }
 
-.hero-pg {
-  background-color: rgba(0, 0, 0, 0.664);
-  height: 560px;
+.quote {
+    font-family: 'Poller One', cursive;
+    font-size: 25px;
+    padding: 8%;
 }
 
-.indent {
-  margin-left: 25%;
+.auth {
+    text-align: right;
 }
 
-.sqform {
-  width: 56px;
-}
-
-.squad {
-  height: 420px;
-  background-color: rgba(0, 0, 0, 0.658);
-  background-image: url("/images/Squad.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-/* .display {
-  height: 420px;
-  background-color: rgba(0, 0, 0, 0.658);
-  background-image: url('/images/heroview.png');
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: contain;
-} */
-
-.success {
-  height: 560px;
-  background-color: rgba(0, 0, 0, 0.658);
-  background-image: url("/images/heroview.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: contain;
-}
-
-.sub {
-  height: 420px;
-  background-color: rgba(0, 0, 0, 0.664);
-}
-
-.display {
-  height: 760px;
-  background-color: rgba(0, 0, 0, 0.658);
-  background-image: url("/images/heroview.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: contain;
-}
-
-.hero-item {
-  height: 560px;
-  background-color: rgba(0, 0, 0, 0.664);
-  background-image: url("/images/Batman.png");
-  background-position: right;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-/* .dist {
-  vertical-align: middle;
-} */
-
-.dist {
-  width: 500px;
-  max-width: 90%;
-  margin: 2% 3%;
-  position: relative;
-  display: inline-block;
-  text-align: left;
-  padding: 10px;
-  padding: 10px;
-  padding-left: 60px;
-  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.068);
-  background: rgba(9, 22, 9, 0.5);
-  border-radius: 5px;
-}
-
-.kal {
-  background-color: rgba(0, 0, 0, 0.664);
-}
-
-.harlem {
-    height: 860px;
-    background-color: rgba(0, 0, 0, 0.658);
-    background-image: url("/images/Squad.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.gotham {
-  background-color: rgba(0, 0, 0, 0.664);
-  height: 780px;
-}
-
-.mySquad {
-  width: 500px;
-  max-width: 90%;
-  margin: 2% 3%;
-  position: relative;
-  display: inline-block;
-  text-align: left;
-  padding: 10px;
-  padding: 10px;
-  padding-left: 60px;
-  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.068);
-  background: rgba(9, 22, 9, 0.5);
-  border-radius: 5px;
-}
