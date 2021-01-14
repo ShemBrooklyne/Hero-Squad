@@ -12,7 +12,7 @@ body {
 .main-pg {
   height: 790px;
   /* background-color: rgba(255, 0, 0, 0.089); */
-  background-image: url("/images/spiderman-main-pg.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../images/spiderman-main-pg.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -228,4 +228,30 @@ body {
   box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.068);
   background: rgba(9, 22, 9, 0.5);
   border-radius: 5px;
+}
+
+/* Footer */
+
+/* Sticky Footer Classes */
+
+html,
+body {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+/* Other Classes for Page Styling */
+
+body {
+  background: #007bff;
+  background: linear-gradient(to right, #dc3f45, 
+  #0b7afc);
 }
