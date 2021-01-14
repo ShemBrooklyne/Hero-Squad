@@ -22,7 +22,7 @@ public class SquadTest {
     @Test
     public void newSquad_getTotal_Integer() {
         Squad newSquad = Squad.buildNewSquad();
-        assertEquals(5, newSquad.getSquadTotal());
+        assertEquals(3, newSquad.getSquadTotal());
     }
 
     @Test

@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/main/resources/public/css/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero-Squad 2.0</title>
+    <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-dark bg-dark"></nav>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand text-danger" href="#">Hero-Squad 2.0</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active text-white" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-link text-white" href="#">Hero</a>
-                    <a class="nav-link text-white" href="#">Squad</a>
-                    <a class="nav-link text-white" href="#" tabindex="-1">Create Hero</a>
+    <div class="container-fluid body">
+        <div class="page1">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand text-danger" href="#">Hero-Squad 2.0</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active text-white" href="/">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-white" href="/Hero">Hero</a>
+                        <a class="nav-link text-white" href="/Squad">Squad</a>
+                        <a class="nav-link text-white" href="/Hero-form" tabindex="-1">Create Hero</a>
+                    </div>
                 </div>
-            </div>
-        </nav>
-
+            </nav>
         <div class="main-pg">
             <br />
             <hr class="text-danger" />
@@ -40,15 +37,19 @@
                         <br />
                         <h1 class="text-center text-danger">Create a Hero</h1>
                         <div class="row">
-                            
+    
                             <div class="col-md-8">
-                                <img src="/src/main/resources/public/images/Batman&Robbin.png" alt="" width="350" height="400" />
+    
                             </div>
-
+    
                             <div class="col-md-4 btns">
-                                <button class="btn btn-warning">Create Hero</button> <br />
-                                <br/>
-                                <button class="btn btn-warning">Create a Squad</button> <br />
+                                <a href="/Hero-form">
+                                    <button class="btn btn-warning">Create Hero</button>
+                                </a> <br />
+                                <br />
+                                <a href="/Squad-form">
+                                    <button class="btn btn-warning">Create a Squad</button>
+                                </a> <br />
                             </div>
                         </div>
                     </div>
@@ -56,6 +57,8 @@
             </div>
         </div>
     </div>
+    </div>
+    
+    
 </body>
-
 </html>

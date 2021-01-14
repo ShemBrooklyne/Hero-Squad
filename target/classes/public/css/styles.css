@@ -1,33 +1,69 @@
 body {
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.664);
+  background-color: rgba(255, 0, 0, 0.658);
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
+
+/* .body {
+  background-color: rgba(255, 0, 0, 0.658);
+} */
 
 .main-pg {
   height: 790px;
-  background-color: rgba(0, 0, 0, 0.664);
+  /* background-color: rgba(255, 0, 0, 0.089); */
+  background-image: url("/images/spiderman-main-pg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* height: 790px; */
+  /* width: 100%; */
 }
 
-.page {
+.fig-img {
+  /* background-color: rgba(255, 0, 0, 0.507); */
+}
+
+.dig-box {
+  background-color: rgba(0, 0, 0, 0.644);
+}
+
+.title, h5, .super {
+  font-family: 'Potta One', cursive;
+}
+
+.submit {
+  background-color:rgba(240, 248, 255, 0.247);
+}
+
+/* .page {
   height: 560px;
   background-color: rgba(0, 0, 0, 0.658);
   background-image: url("/images/superman.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-}
+} */
+
+/* .page1 {
+  background-image: url("../images/spiderman-main-pg.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 790px; */
+  /* width: 100%;
+
+} */
 
 .btns {
   margin-top: 12%;
 }
 
-img,
+/* img,
 .btn9 {
   animation: shake 1s;
   animation-iteration-count: infinite;
-}
+} */
 
 .btn:hover {
   animation: shake 1s;
